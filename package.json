@@ -3,9 +3,13 @@
   "scripts": {
     "start": "webpack serve",
     "watch": "webpack --watch",
-    "build": "webpack build"
+    "build": "NODE_ENV=production webpack",
+    "build-dev": "webpack"
   },
   "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.0",
+    "babel-loader": "^8.2.2",
     "webpack": "^5.36.2",
     "webpack-cli": "^4.6.0",
     "webpack-dev-server": "^3.11.2"

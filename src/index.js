@@ -5,4 +5,10 @@ const elvenShieldReceipe = {
   k: "s",
 };
 
+const x = {
+  ...elvenShieldReceipe,
+  y: "z",
+};
+
 console.log(elvenShieldReceipe);
+console.log(x);
