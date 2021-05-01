@@ -1,0 +1,10 @@
+@use 'variables';
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: variables.$bg;
+  font-size: 20px;
+  color: var(--text);
+}
