@@ -12,8 +12,25 @@ module.exports = {
   mode,
   target,
 
+  output: {
+    assetModuleFilename: "images/[hash][ext][query]",
+  },
+
   module: {
     rules: [
+      {
+        test: /\.(jpg|jpeg|png|svg|gif)$/i,
+
+        // type = 'asset/inline' | 'asset/resource' | 'asset'
+        type: "asset",
+
+        // you can set the max size of an inline asset
+        parser: {
+          dataUrlCondition: {
+            maxSize: 30 * 1024,
+          },
+        },
+      },
       {
         test: /\.(s[ac]|c)ss$/i,
         use: [
